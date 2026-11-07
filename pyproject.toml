@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pvz-screenshot-agent"
+version = "0.1.0"
+description = "Screenshot-driven RL agent for the original PC Plants vs. Zombies"
+requires-python = ">=3.10,<3.13"
+dependencies = [
+  "gymnasium>=0.29,<2",
+  "mss>=9,<11",
+  "numpy>=1.26,<3",
+  "opencv-python>=4.9,<5",
+  "Pillow>=10,<13",
+  "PyAutoGUI>=0.9.54,<1",
+  "stable-baselines3[extra]>=2.3,<3",
+  "torch>=2.2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
